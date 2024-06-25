@@ -20,7 +20,7 @@ Using this program's method, you can make in-app purchases using cryptocurrencie
 This program is written in Godot game engine and GDscript programming language:
 
 
-[https://defold.com](https://godotengine.org)
+[https://godotengine.org](https://godotengine.org)
 
 Users only had limited time to finish payment.
 
