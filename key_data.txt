@@ -1,6 +1,6 @@
 3
 https://unixtime.org
- (%d%d:%d%d:%d%d) GMT</td><td>
+(\\d{2}):(\\d{2}):(\\d{2})
 [0-9]+-[A-Z][a-z]+-[0-9]+
 -
  
