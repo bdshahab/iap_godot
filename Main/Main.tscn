@@ -1,0 +1,166 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5yn1grrkuxla"]
+
+[ext_resource type="Script" path="res://Main/Main.gd" id="1"]
+[ext_resource type="Theme" uid="uid://dh006a4e4gjqk" path="res://Payment/UI/theme.tres" id="2"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(0.945098, 1, 0, 1)
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Purchase_situation" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 31.0
+offset_top = 24.0
+offset_right = -31.0
+offset_bottom = 126.0
+grow_horizontal = 2
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="text_bought_situation" type="Label" parent="Purchase_situation"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -713.0
+offset_top = -24.0
+offset_right = 652.0
+offset_bottom = 119.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "You have not purchased this app yet!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="color_Pay_Button" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 33.0
+offset_top = 152.0
+offset_right = -29.0
+offset_bottom = 256.0
+grow_horizontal = 2
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="text_Pay_Button" type="Label" parent="color_Pay_Button"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -713.0
+offset_top = -24.0
+offset_right = 652.0
+offset_bottom = 119.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "In App Purchase by Cryptocurrency"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="color_About_Button" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 33.0
+offset_top = 280.0
+offset_right = -29.0
+offset_bottom = 384.0
+grow_horizontal = 2
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="text_About_Button" type="Label" parent="color_About_Button"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -713.0
+offset_top = -24.0
+offset_right = 652.0
+offset_bottom = 119.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "About"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="color_Exit_Button" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 33.0
+offset_top = 622.0
+offset_right = -29.0
+offset_bottom = 726.0
+grow_horizontal = 2
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="text_Exit_Button" type="Label" parent="color_Exit_Button"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -713.0
+offset_top = -24.0
+offset_right = 652.0
+offset_bottom = 119.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pay_Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 152.0
+offset_right = 1337.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 55
+
+[node name="About_Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 280.0
+offset_right = 1337.0
+offset_bottom = 384.0
+theme_override_font_sizes/font_size = 55
+
+[node name="Exit_Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 622.0
+offset_right = 1337.0
+offset_bottom = 726.0
+theme_override_font_sizes/font_size = 55
+
+[connection signal="visibility_changed" from="." to="." method="_on_Main_visibility_changed"]
+[connection signal="mouse_entered" from="Pay_Button" to="." method="_on_pay_button_mouse_entered"]
+[connection signal="mouse_exited" from="Pay_Button" to="." method="_on_pay_button_mouse_exited"]
+[connection signal="pressed" from="Pay_Button" to="." method="_on_Pay_Button_pressed"]
+[connection signal="mouse_entered" from="About_Button" to="." method="_on_about_button_mouse_entered"]
+[connection signal="mouse_exited" from="About_Button" to="." method="_on_about_button_mouse_exited"]
+[connection signal="pressed" from="About_Button" to="." method="_on_About_Button_pressed"]
+[connection signal="mouse_entered" from="Exit_Button" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="mouse_exited" from="Exit_Button" to="." method="_on_exit_button_mouse_exited"]
+[connection signal="pressed" from="Exit_Button" to="." method="_on_Exit_Button_pressed"]
