@@ -1,0 +1,91 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://ddf74icgvwijg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_koeb8"]
+bg_color = Color(1, 0.458824, 0.423529, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.944438, 0.952427, 0.524953, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.392157, 0, 0, 0.6)
+shadow_size = 5
+shadow_offset = Vector2(2.5, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6t72"]
+bg_color = Color(0.819608, 0, 0.113725, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.988235, 0.996078, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.392157, 0, 0, 0.6)
+shadow_size = 5
+shadow_offset = Vector2(2.5, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c570y"]
+bg_color = Color(0.556863, 0, 0.0627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.180392, 0.180392, 0.0156863, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.392157, 0, 0, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2.5, 3.5)
+
+[sub_resource type="FontFile" id="7"]
+fallbacks = Array[Font]([null])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="8"]
+fallbacks = Array[Font]([null])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0chah"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0.556863, 0.8, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="FontVariation" id="FontVariation_y4aim"]
+
+[resource]
+default_font = SubResource("FontVariation_y4aim")
+default_font_size = 40
+Button/styles/hover = SubResource("StyleBoxFlat_koeb8")
+Button/styles/normal = SubResource("StyleBoxFlat_g6t72")
+Button/styles/pressed = SubResource("StyleBoxFlat_c570y")
+Fonts/fonts/large = SubResource("7")
+Fonts/fonts/normal = SubResource("8")
+Panel/styles/panel = SubResource("StyleBoxFlat_0chah")
