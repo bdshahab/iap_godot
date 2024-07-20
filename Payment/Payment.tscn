@@ -1,0 +1,350 @@
+[gd_scene load_steps=11 format=3 uid="uid://sh1fm2drg2yk"]
+
+[ext_resource type="Texture2D" uid="uid://byvdsq103s4g8" path="res://Payment/Photos/back.png" id="2"]
+[ext_resource type="Script" path="res://Payment/Payment.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://bevb8w45i6lfm" path="res://Payment/Photos/dash (dash).png" id="4_1rhde"]
+[ext_resource type="FontFile" uid="uid://ct2apt5gkmron" path="res://Payment/UI/TheanoDidot-Regular.ttf" id="5_f0b31"]
+[ext_resource type="Texture2D" uid="uid://wpy0qu662uh0" path="res://Payment/Photos/copy.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cpi0ihe814p5l" path="res://Payment/Photos/paste.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cgqs8yydn477" path="res://Payment/Photos/help.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://d1rqva2wxhmto" path="res://Payment/Photos/buy.png" id="11"]
+[ext_resource type="Theme" uid="uid://dh006a4e4gjqk" path="res://Payment/UI/theme.tres" id="12"]
+
+[sub_resource type="Theme" id="Theme_tfgma"]
+
+[node name="Payment" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12")
+script = ExtResource("3")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.796078, 0.796078, 0.796078, 1)
+
+[node name="selected_payment_icon" type="TextureButton" parent="."]
+layout_mode = 1
+offset_right = 130.0
+offset_bottom = 120.0
+focus_mode = 0
+texture_normal = ExtResource("4_1rhde")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+offset_left = 147.0
+offset_top = 10.0
+offset_right = 1089.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 55
+text = "Pay before time's up!"
+
+[node name="timer" type="Label" parent="."]
+self_modulate = Color(0, 0, 1, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -230.0
+offset_bottom = 92.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("5_f0b31")
+theme_override_font_sizes/font_size = 70
+text = "00 : 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="address_text" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -683.0
+offset_top = -264.0
+offset_right = -403.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 55
+text = "Address:"
+
+[node name="text_address" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 96.0
+offset_right = 1240.0
+offset_bottom = 208.0
+tooltip_text = "Address"
+theme_override_font_sizes/font_size = 40
+editable = false
+
+[node name="copy_wallet_address" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1248.0
+offset_top = 96.0
+offset_right = 1361.0
+offset_bottom = 208.0
+tooltip_text = "copy address"
+focus_mode = 0
+texture_normal = ExtResource("8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label_price" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -683.0
+offset_top = -136.0
+offset_right = -403.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 55
+text = "Price:"
+
+[node name="text_price" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 230.0
+offset_right = 1240.0
+offset_bottom = 342.0
+tooltip_text = "Price"
+theme_override_font_sizes/font_size = 40
+editable = false
+virtual_keyboard_type = 3
+
+[node name="copy_price" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1248.0
+offset_top = 230.0
+offset_right = 1361.0
+offset_bottom = 342.0
+tooltip_text = "copy price"
+focus_mode = 0
+texture_normal = ExtResource("8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label_txid" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -675.0
+offset_top = -23.0
+offset_right = 674.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 55
+text = "Input your Transaction Hash ID (TXID):"
+
+[node name="txid" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 448.0
+offset_right = 1240.0
+offset_bottom = 560.0
+tooltip_text = "Transaction Hash ID (TXID)"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 100, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_f0b31")
+theme_override_font_sizes/font_size = 40
+
+[node name="paste_txid" type="TextureButton" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1248.0
+offset_top = 440.0
+offset_right = 1361.0
+offset_bottom = 552.0
+tooltip_text = "paste TXID"
+focus_mode = 0
+texture_normal = ExtResource("9")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 130)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 170
+alignment = 1
+
+[node name="back" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+focus_mode = 0
+theme = SubResource("Theme_tfgma")
+texture_normal = ExtResource("2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="help" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+tooltip_text = "Help"
+focus_mode = 0
+texture_normal = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="copy_all" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+tooltip_text = "Copy all"
+focus_mode = 0
+texture_normal = ExtResource("8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="buy" type="TextureButton" parent="HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.768627, 0.0431373, 1, 1)
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+tooltip_text = "Pay"
+focus_mode = 0
+texture_normal = ExtResource("11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="dialogue" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 0, 1)
+
+[node name="text_dialogue" type="Label" parent="dialogue"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 608.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "First, enter the TXID and then proceed to verify the purchase."
+autowrap_mode = 3
+
+[node name="ok_dialogue" type="TextureButton" parent="dialogue"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -80.0
+offset_right = 108.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="dialogue/ok_dialogue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="text1" type="Label" parent="dialogue/ok_dialogue"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -31.5
+offset_right = 32.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "OK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="logo_dialogue" type="Sprite2D" parent="dialogue"]
+position = Vector2(1152, 592.625)
+scale = Vector2(0.5, 0.552926)
+texture = ExtResource("2")
+
+[connection signal="pressed" from="selected_payment_icon" to="." method="_on_selected_payment_icon_pressed"]
+[connection signal="button_down" from="copy_wallet_address" to="." method="_on_copy_wallet_address_button_down"]
+[connection signal="button_up" from="copy_wallet_address" to="." method="_on_copy_wallet_address_button_up"]
+[connection signal="mouse_entered" from="copy_wallet_address" to="." method="_on_copy_wallet_address_mouse_entered"]
+[connection signal="mouse_exited" from="copy_wallet_address" to="." method="_on_copy_wallet_address_mouse_exited"]
+[connection signal="pressed" from="copy_wallet_address" to="." method="_on_copy_wallet_address_pressed"]
+[connection signal="button_down" from="copy_price" to="." method="_on_copy_price_button_down"]
+[connection signal="button_up" from="copy_price" to="." method="_on_copy_price_button_up"]
+[connection signal="mouse_entered" from="copy_price" to="." method="_on_copy_price_mouse_entered"]
+[connection signal="mouse_exited" from="copy_price" to="." method="_on_copy_price_mouse_exited"]
+[connection signal="pressed" from="copy_price" to="." method="_on_copy_price_pressed"]
+[connection signal="button_down" from="paste_txid" to="." method="_on_paste_txid_button_down"]
+[connection signal="button_up" from="paste_txid" to="." method="_on_paste_txid_button_up"]
+[connection signal="mouse_entered" from="paste_txid" to="." method="_on_paste_txid_mouse_entered"]
+[connection signal="mouse_exited" from="paste_txid" to="." method="_on_paste_txid_mouse_exited"]
+[connection signal="pressed" from="paste_txid" to="." method="_on_paste_txid_pressed"]
+[connection signal="button_down" from="HBoxContainer/back" to="." method="_on_back_button_down"]
+[connection signal="mouse_entered" from="HBoxContainer/back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/back" to="." method="_on_back_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="button_down" from="HBoxContainer/help" to="." method="_on_help_button_down"]
+[connection signal="mouse_entered" from="HBoxContainer/help" to="." method="_on_help_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/help" to="." method="_on_help_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/help" to="." method="_on_help_pressed"]
+[connection signal="button_down" from="HBoxContainer/copy_all" to="." method="_on_copy_all_button_down"]
+[connection signal="button_up" from="HBoxContainer/copy_all" to="." method="_on_copy_all_button_up"]
+[connection signal="mouse_entered" from="HBoxContainer/copy_all" to="." method="_on_copy_all_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/copy_all" to="." method="_on_copy_all_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/copy_all" to="." method="_on_copy_all_pressed"]
+[connection signal="button_down" from="HBoxContainer/buy" to="." method="_on_buy_button_down"]
+[connection signal="button_up" from="HBoxContainer/buy" to="." method="_on_buy_button_up"]
+[connection signal="mouse_entered" from="HBoxContainer/buy" to="." method="_on_buy_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/buy" to="." method="_on_buy_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/buy" to="." method="_on_buy_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="dialogue/ok_dialogue" to="." method="_on_ok_dialogue_pressed"]

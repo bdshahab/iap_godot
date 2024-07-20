@@ -1,0 +1,367 @@
+[gd_scene load_steps=24 format=3 uid="uid://crslpiq5nsn3i"]
+
+[ext_resource type="Theme" uid="uid://dh006a4e4gjqk" path="res://Payment/UI/theme.tres" id="1_h4qwg"]
+[ext_resource type="Script" path="res://Payment/select_coin.gd" id="2_b7m4u"]
+[ext_resource type="FontFile" uid="uid://ct2apt5gkmron" path="res://Payment/UI/TheanoDidot-Regular.ttf" id="2_vhpvt"]
+[ext_resource type="Texture2D" uid="uid://byvdsq103s4g8" path="res://Payment/Photos/back.png" id="3_imxeb"]
+[ext_resource type="Texture2D" uid="uid://cp8qcyubdsppp" path="res://Payment/Photos/bitcoin (btc).png" id="4_wfo8f"]
+[ext_resource type="Texture2D" uid="uid://8e8lneprb58n" path="res://Payment/Photos/bitcoin cash (bch).png" id="5_hindb"]
+[ext_resource type="Texture2D" uid="uid://bdpdprm6p1bha" path="res://Payment/Photos/bitcoin gold (btg).png" id="6_0xsx3"]
+[ext_resource type="Texture2D" uid="uid://bevb8w45i6lfm" path="res://Payment/Photos/dash (dash).png" id="7_jynnv"]
+[ext_resource type="Texture2D" uid="uid://cqy4p2drm0duv" path="res://Payment/Photos/digibyte (dgb).png" id="8_nk152"]
+[ext_resource type="Texture2D" uid="uid://cqos7gpb231qi" path="res://Payment/Photos/dogecoin (doge).png" id="9_lgs1b"]
+[ext_resource type="Texture2D" uid="uid://dye08ns5oxxbx" path="res://Payment/Photos/ethereum (eth).png" id="10_jf3fp"]
+[ext_resource type="Texture2D" uid="uid://oswamk14417g" path="res://Payment/Photos/firo (firo).png" id="11_b2dt0"]
+[ext_resource type="Texture2D" uid="uid://dntokqpofut55" path="res://Payment/Photos/komodo (kmd).png" id="12_k3la6"]
+[ext_resource type="Texture2D" uid="uid://bl5mhqojf7bha" path="res://Payment/Photos/litecoin (ltc).png" id="13_v57fx"]
+[ext_resource type="Texture2D" uid="uid://se74uha7sa6q" path="res://Payment/Photos/qtum (qtum).png" id="14_8f5ew"]
+[ext_resource type="Texture2D" uid="uid://coiy7bbkbitkp" path="res://Payment/Photos/ravencoin (rvn).png" id="15_i4twg"]
+[ext_resource type="Texture2D" uid="uid://d0rstucyp40og" path="res://Payment/Photos/reddcoin (rdd).png" id="16_s1km1"]
+[ext_resource type="Texture2D" uid="uid://b1icr5u4mhvy1" path="res://Payment/Photos/verge (xvg).png" id="17_80hkl"]
+[ext_resource type="Texture2D" uid="uid://cfxolcvnja1vn" path="res://Payment/Photos/vertcoin (vtc).png" id="18_cpkk6"]
+[ext_resource type="Texture2D" uid="uid://jbatc6lh05ml" path="res://Payment/Photos/zcash (zec).png" id="19_2g4j8"]
+
+[sub_resource type="Animation" id="Animation_d1sqg"]
+resource_name = "normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_03y8b"]
+resource_name = "selected_coin"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_db520"]
+_data = {
+"normal": SubResource("Animation_d1sqg"),
+"selected_coin": SubResource("Animation_03y8b")
+}
+
+[node name="SelectCoin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h4qwg")
+script = ExtResource("2_b7m4u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 70.0
+grow_horizontal = 2
+pivot_offset = Vector2(683, 35)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vhpvt")
+theme_override_font_sizes/font_size = 55
+text = "Choose a digital currency to pay:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -130.0
+offset_right = 228.0
+grow_vertical = 0
+focus_mode = 0
+theme = ExtResource("1_h4qwg")
+texture_normal = ExtResource("3_imxeb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="selected_coin" type="Label" parent="."]
+layout_mode = 2
+offset_left = 246.0
+offset_top = 651.0
+offset_right = 1119.0
+offset_bottom = 754.0
+grow_horizontal = 2
+pivot_offset = Vector2(436, 51)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vhpvt")
+theme_override_font_sizes/font_size = 55
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -130.0
+offset_right = -25.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+theme = ExtResource("1_h4qwg")
+texture_normal = ExtResource("3_imxeb")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="coins" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bitcoin" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 88.0
+offset_right = 162.0
+offset_bottom = 240.0
+texture_normal = ExtResource("4_wfo8f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="bitcoin_cash" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 244.0
+offset_top = 88.0
+offset_right = 402.0
+offset_bottom = 240.0
+texture_normal = ExtResource("5_hindb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="bitcoin_gold" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 484.0
+offset_top = 88.0
+offset_right = 642.0
+offset_bottom = 240.0
+texture_normal = ExtResource("6_0xsx3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="dash" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 724.0
+offset_top = 88.0
+offset_right = 882.0
+offset_bottom = 240.0
+texture_normal = ExtResource("7_jynnv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="digibyte" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 964.0
+offset_top = 88.0
+offset_right = 1122.0
+offset_bottom = 240.0
+texture_normal = ExtResource("8_nk152")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="dogecoin" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 1204.0
+offset_top = 88.0
+offset_right = 1362.0
+offset_bottom = 240.0
+texture_normal = ExtResource("9_lgs1b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ethereum" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 124.0
+offset_top = 276.0
+offset_right = 282.0
+offset_bottom = 428.0
+texture_normal = ExtResource("10_jf3fp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="firo" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 484.0
+offset_top = 276.0
+offset_right = 642.0
+offset_bottom = 428.0
+texture_normal = ExtResource("11_b2dt0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="komodo" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 724.0
+offset_top = 276.0
+offset_right = 882.0
+offset_bottom = 428.0
+texture_normal = ExtResource("12_k3la6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="litecoin" type="TextureButton" parent="coins"]
+layout_mode = 2
+offset_left = 1084.0
+offset_top = 276.0
+offset_right = 1242.0
+offset_bottom = 428.0
+texture_normal = ExtResource("13_v57fx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="qtum" type="TextureButton" parent="coins"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 461.0
+offset_right = 162.0
+offset_bottom = 613.0
+texture_normal = ExtResource("14_8f5ew")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ravencoin" type="TextureButton" parent="coins"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 461.0
+offset_right = 402.0
+offset_bottom = 613.0
+texture_normal = ExtResource("15_i4twg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="reddcoin" type="TextureButton" parent="coins"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 461.0
+offset_right = 642.0
+offset_bottom = 613.0
+texture_normal = ExtResource("16_s1km1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="verge" type="TextureButton" parent="coins"]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 461.0
+offset_right = 882.0
+offset_bottom = 613.0
+texture_normal = ExtResource("17_80hkl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="vertcoin" type="TextureButton" parent="coins"]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 461.0
+offset_right = 1122.0
+offset_bottom = 613.0
+texture_normal = ExtResource("18_cpkk6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="zcash" type="TextureButton" parent="coins"]
+layout_mode = 0
+offset_left = 1204.0
+offset_top = 461.0
+offset_right = 1362.0
+offset_bottom = 613.0
+texture_normal = ExtResource("19_2g4j8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_db520")
+}
+
+[connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="Back" to="." method="_on_back_mouse_exited"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="Next" to="." method="_on_next_mouse_entered"]
+[connection signal="mouse_exited" from="Next" to="." method="_on_next_mouse_exited"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="mouse_entered" from="coins/bitcoin" to="." method="_on_bitcoin_mouse_entered"]
+[connection signal="mouse_exited" from="coins/bitcoin" to="." method="_on_bitcoin_mouse_exited"]
+[connection signal="pressed" from="coins/bitcoin" to="." method="_on_bitcoin_pressed"]
+[connection signal="mouse_entered" from="coins/bitcoin_cash" to="." method="_on_bitcoin_cash_mouse_entered"]
+[connection signal="mouse_exited" from="coins/bitcoin_cash" to="." method="_on_bitcoin_cash_mouse_exited"]
+[connection signal="pressed" from="coins/bitcoin_cash" to="." method="_on_bitcoin_cash_pressed"]
+[connection signal="mouse_entered" from="coins/bitcoin_gold" to="." method="_on_bitcoin_gold_mouse_entered"]
+[connection signal="mouse_exited" from="coins/bitcoin_gold" to="." method="_on_bitcoin_gold_mouse_exited"]
+[connection signal="pressed" from="coins/bitcoin_gold" to="." method="_on_bitcoin_gold_pressed"]
+[connection signal="mouse_entered" from="coins/dash" to="." method="_on_dash_mouse_entered"]
+[connection signal="mouse_exited" from="coins/dash" to="." method="_on_dash_mouse_exited"]
+[connection signal="pressed" from="coins/dash" to="." method="_on_dash_pressed"]
+[connection signal="mouse_entered" from="coins/digibyte" to="." method="_on_digibyte_mouse_entered"]
+[connection signal="mouse_exited" from="coins/digibyte" to="." method="_on_digibyte_mouse_exited"]
+[connection signal="pressed" from="coins/digibyte" to="." method="_on_digibyte_pressed"]
+[connection signal="mouse_entered" from="coins/dogecoin" to="." method="_on_dogecoin_mouse_entered"]
+[connection signal="mouse_exited" from="coins/dogecoin" to="." method="_on_dogecoin_mouse_exited"]
+[connection signal="pressed" from="coins/dogecoin" to="." method="_on_dogecoin_pressed"]
+[connection signal="mouse_entered" from="coins/ethereum" to="." method="_on_ethereum_mouse_entered"]
+[connection signal="mouse_exited" from="coins/ethereum" to="." method="_on_ethereum_mouse_exited"]
+[connection signal="pressed" from="coins/ethereum" to="." method="_on_ethereum_pressed"]
+[connection signal="mouse_entered" from="coins/firo" to="." method="_on_firo_mouse_entered"]
+[connection signal="mouse_exited" from="coins/firo" to="." method="_on_firo_mouse_exited"]
+[connection signal="pressed" from="coins/firo" to="." method="_on_firo_pressed"]
+[connection signal="mouse_entered" from="coins/komodo" to="." method="_on_komodo_mouse_entered"]
+[connection signal="mouse_exited" from="coins/komodo" to="." method="_on_komodo_mouse_exited"]
+[connection signal="pressed" from="coins/komodo" to="." method="_on_komodo_pressed"]
+[connection signal="mouse_entered" from="coins/litecoin" to="." method="_on_litecoin_mouse_entered"]
+[connection signal="mouse_exited" from="coins/litecoin" to="." method="_on_litecoin_mouse_exited"]
+[connection signal="pressed" from="coins/litecoin" to="." method="_on_litecoin_pressed"]
+[connection signal="mouse_entered" from="coins/qtum" to="." method="_on_qtum_mouse_entered"]
+[connection signal="mouse_exited" from="coins/qtum" to="." method="_on_qtum_mouse_exited"]
+[connection signal="pressed" from="coins/qtum" to="." method="_on_qtum_pressed"]
+[connection signal="mouse_entered" from="coins/ravencoin" to="." method="_on_ravencoin_mouse_entered"]
+[connection signal="mouse_exited" from="coins/ravencoin" to="." method="_on_ravencoin_mouse_exited"]
+[connection signal="pressed" from="coins/ravencoin" to="." method="_on_ravencoin_pressed"]
+[connection signal="mouse_entered" from="coins/reddcoin" to="." method="_on_reddcoin_mouse_entered"]
+[connection signal="mouse_exited" from="coins/reddcoin" to="." method="_on_reddcoin_mouse_exited"]
+[connection signal="pressed" from="coins/reddcoin" to="." method="_on_reddcoin_pressed"]
+[connection signal="mouse_entered" from="coins/verge" to="." method="_on_verge_mouse_entered"]
+[connection signal="mouse_exited" from="coins/verge" to="." method="_on_verge_mouse_exited"]
+[connection signal="pressed" from="coins/verge" to="." method="_on_verge_pressed"]
+[connection signal="mouse_entered" from="coins/vertcoin" to="." method="_on_vertcoin_mouse_entered"]
+[connection signal="mouse_exited" from="coins/vertcoin" to="." method="_on_vertcoin_mouse_exited"]
+[connection signal="pressed" from="coins/vertcoin" to="." method="_on_vertcoin_pressed"]
+[connection signal="mouse_entered" from="coins/zcash" to="." method="_on_zcash_mouse_entered"]
+[connection signal="mouse_exited" from="coins/zcash" to="." method="_on_zcash_mouse_exited"]
+[connection signal="pressed" from="coins/zcash" to="." method="_on_zcash_pressed"]
