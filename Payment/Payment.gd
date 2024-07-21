@@ -653,7 +653,7 @@ func test_IAP(value):
 	In summary:
 	Total Output == Total Input - Transaction Fee
 	'''
-	if value == null or value == false:
+	if value == false:
 		return
 
 	print("Data:")
