@@ -182,7 +182,7 @@ func is_time_in_duration(text_time, first_time, last_time):
 
 func connection_status(code):
 	#https://docs.godotengine.org/en/stable/classes/class_httpclient.html#enum-httpclient-responsecode
-	if not(code == 200 or code == 304):
+	if not(code >= 200 and code < 400):
 		if registered_txid != "":
 			show_dialogue("", "internet_lost", MESSAGE_LOST_CONNECTION)
 		return
