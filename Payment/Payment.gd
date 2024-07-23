@@ -294,7 +294,7 @@ func http_price_function(result, response_code, headers, body):
 		var number = get_just_number(get_price_from_web(text))
 		if number != null:
 			PRICE_TEST_IS_OK = true
-			number = APP_PRICE / float(number)
+			number = APP_PRICE / number
 			# Converting a number to text format helps to show it in normal mode not in scientific notation.
 			# For example, instead of (1.5e-07), we want (0.00000015)
 			var number_in_text = convert_exponential_to_normal(number)
@@ -435,14 +435,18 @@ func go_back():
 	get_tree().change_scene_to_file("res://Payment/select_coin.tscn")
 
 func get_just_number(text):
-	# Use a regular expression to extract all the numeric characters
-	var numbers = RegEx.new()
-	numbers.compile("[0-9]+,*([0-9])*.*[0-9]+")
-	var result = numbers.search_all(text)
-	# Join the extracted numbers into a single string
-	var number_string = ""
-	number_string = result[0].get_string()
-	return number_string
+	if text != null and len(text) != 0:
+		# Use a regular expression to extract all the numeric characters
+		var numbers = RegEx.new()
+		var pattern = "[0-9]+,*([0-9])*.*[0-9]+"
+		numbers.compile(pattern)
+		var result = numbers.search_all(text)
+		# Join the extracted numbers into a single string
+		var number_string = result[0].get_string()
+		var temp = number_string.replace(",", "")
+		return float(temp)
+	else:
+		return null
 
 func remove_all_whitespaces(temp):
 	var regex = RegEx.new()
