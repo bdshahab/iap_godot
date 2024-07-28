@@ -96,7 +96,6 @@ var MESSAGE_HELP = "Once you know the price, go to your cryptocurrency account. 
 func _ready():
 	define_buttons()
 	$timer.text = get_display_time(TOTAL_TIME)
-	counting_timer()
 	set_coin_icon()
 	# if selected_payment is "ReddCoin (RDD)" and in the current situation, we use "RDD"
 	# if price site codes will change, maybe we use "ReddCoin"
@@ -106,7 +105,8 @@ func _ready():
 	BUY_CLICKED = false
 	get_web_content_from(KEY_DATA_SITE, "", "", "", http_key_data_function)
 
-func http_key_data_function(result, response_code, headers, body):
+func http_key_data_function(result, response_code, _headers, body):
+	connection_status(response_code)
 	if result == HTTPRequest.RESULT_SUCCESS:
 		var text = body.get_string_from_utf8()
 		var num = 1
@@ -163,7 +163,7 @@ func http_key_data_function(result, response_code, headers, body):
 			num = num + 1
 		get_web_content_from(PRICE_SITE, PRICE_SITE_PREFIX, price_site_middle, PRICE_SITE_SUFFIX, http_price_function)
 	else:
-		$netDialog.show()
+		show_dialogue("back", "internet_lost", MESSAGE_LOST_CONNECTION)
 
 func get_time_in_seconds(text_time: String) -> int:
 	var time_parts: PackedStringArray = text_time.split(":")
@@ -181,13 +181,12 @@ func is_time_in_duration(text_time, first_time, last_time):
 	return the_time >= the_first_time and the_time <= the_last_time
 
 func connection_status(code):
-	#https://docs.godotengine.org/en/stable/classes/class_httpclient.html#enum-httpclient-responsecode
 	if not(code >= 200 and code < 400):
 		if registered_txid != "":
 			show_dialogue("", "internet_lost", MESSAGE_LOST_CONNECTION)
 		return
 
-func http_date_time_function(result, response_code, headers, body):
+func http_date_time_function(result, response_code, _headers, body):
 	connection_status(response_code)
 	if result == HTTPRequest.RESULT_SUCCESS:
 		var text = body.get_string_from_utf8()
@@ -226,7 +225,7 @@ func get_registered_clock(text):
 	else:
 		return clock
 
-func http_verify_function(result, response_code, headers, body):
+func http_verify_function(result, response_code, _headers, body):
 	connection_status(response_code)
 	if result == HTTPRequest.RESULT_SUCCESS:
 		var text = body.get_string_from_utf8()
@@ -286,7 +285,8 @@ func paste_operation():
 func get_price_from_web(text):
 	return format_by_regex(text, PRICE_SITE_REGEX)
 
-func http_price_function(result, response_code, headers, body):
+func http_price_function(result, response_code, _headers, body):
+	connection_status(response_code)
 	PRICE_TEST_IS_OK = false
 	if result == HTTPRequest.RESULT_SUCCESS:
 		PRICE_TEST_IS_OK = false
@@ -304,14 +304,15 @@ func http_price_function(result, response_code, headers, body):
 			else:
 				$text_price.text = number_in_text
 				timer_active = true
+				counting_timer()
 				get_date_time()
 		else:
 			var coin_str = Global.selected_payment.replace(" ", "%20")
 			get_web_content_from(GITHUB, "default%20prices/", coin_str,".txt", http_default_price_function)
 	else:
-		$netDialog.show()
+		show_dialogue("back", "internet_lost", MESSAGE_LOST_CONNECTION)
 
-func http_default_price_function(result, code, response_headers, body):
+func http_default_price_function(result, code, _response_headers, body):
 	connection_status(code)
 	if result == HTTPRequest.RESULT_SUCCESS:
 		var number = body.get_string_from_utf8()
