@@ -19,15 +19,15 @@ var KEY_DATA_SITE = GITHUB + "key_data.txt"
 var IAP_VERSION = "3"
 # To get the current Date & Time
 var DATE_TIME_SITE = "https://unixtime.org"
-var TIME_REGEX = " (%d%d:%d%d:%d%d) GMT</td><td>"
-var DATE_REGEX = "%a+, (%d+ %a+ %d+) "
+var TIME_REGEX = "([0-2][0-9]:[0-5][0-9]:[0-5][0-9])"
+var DATE_REGEX = "[0-9]+-[A-Z][a-z]+-[0-9]+"
 var DATE_REMOVE = "-"
 var DATE_REPLACE = " "
-var CLOCK_REGEX = "(%d%d:%d%d:%d%d)"
+var CLOCK_REGEX = "([0-2][0-9]:[0-5][0-9]:[0-5][0-9])"
 
 # To get the current price of coins
 var PRICE_SITE = "https://cryptorank.io/price/"
-var PRICE_SITE_REGEX = 'Price \\$ ([0-9]+\\.[0-9]+), Market Cap'
+var PRICE_SITE_REGEX = 'Price \\$ ([0-9]+\\.[0-9]+), Trading Volume'
 var PRICE_SITE_PREFIX = ""
 var PRICE_SITE_SUFFIX = ""
 var COIN_REGEX_1 = "([^%(]+)" # '(%a+%s%a+) %(%a+%)' --'%((%a+)%)'
@@ -198,13 +198,14 @@ func http_date_time_function(result, response_code, _headers, body):
 			first_date = date
 			first_clock = time
 			if TESTING:
-				print("Time format:")
-				print(time)
+				print("First Time format: " + time)
 				TIME_TEST_IS_OK = is_valid_time_format(time)
-				print("Date format:")
-				print(date)
+				print("First Date format: " + date)
 				DATE_TEST_IS_OK = is_valid_date_format(date)
 		else:
+			if TESTING:
+				print("Second Time format: " + time)
+				print("Second Date format: " + date)
 			last_date = date
 			last_clock = time
 			verify()
@@ -365,7 +366,7 @@ func get_web_content_from(main_site, site_prefix, site_middle, site_suffix, http
 	# Make the HTTP request
 	var error = http_request.request(main_site + site_prefix + site_middle + site_suffix)
 	if error != OK:
-		push_error("An error occurred in the HTTP request.")
+		show_dialogue("", "internet_lost", MESSAGE_LOST_CONNECTION)
 
 func get_display_time(number_seconds:int):
 	var sec = number_seconds % 60
@@ -506,13 +507,6 @@ func format_by_regex(text, regex_pattern):
 		return result.get_string()
 	else:
 		return text
-
-func http_callback_function(result, response_code, _headers, body):
-	connection_status(response_code)
-	if result == HTTPRequest.RESULT_SUCCESS:
-		var text = body.get_string_from_utf8()
-	else:
-		push_error("HTTP request failed with result: %d" % result)
 
 func _on_selected_payment_icon_pressed():
 	OS.shell_open("https://duckduckgo.com/?q=cryptocurrency " + Global.selected_payment)
