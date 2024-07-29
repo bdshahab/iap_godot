@@ -6,7 +6,7 @@ https://unixtime.org
  
 ([0-2][0-9]:[0-5][0-9]:[0-5][0-9])
 https://cryptorank.io/price/
-Price $ ([0-9]+.[0-9]+), Market Cap
+Price $ ([0-9]+.[0-9]+), Trading Volume
 
 
 ([^%(]+)
