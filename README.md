@@ -24,11 +24,7 @@ This program is written in Godot game engine and GDscript programming language:
 
 Users only had limited time to finish payment.
 
-The user picks the method of pay
-app to show the price in that currency.
-Users have to send that amount of money to the address.
-Users have to paste [TXID] of payment in the program.
-The app will verify the payment with the registered price at that time.
+The user picks the method of payment, and then the app shows the price in that currency. Users have to send that amount of money to the address. Users have to paste [TXID] of payment in the program. The app will verify the payment with the registered price at that time.
 
 # Full description of this method
 
