@@ -3,12 +3,16 @@ extends Control
 const normal_color = Color(0.5, 0.5, 0.5, 1)
 const hover_color = Color(0.7, 0.7, 0.7, 1)
 
+func test():
+	pass
+
 func _ready():
 	Global.OS_name = OS.get_name()
 	OS.low_processor_usage_mode = OS.get_name() != "Android"
 	get_window().mode = Window.MODE_MAXIMIZED if (true) else Window.MODE_WINDOWED
 	# This is for MAC OS and HTML not other OSs!
 #	DisplayServer.set_native_icon("res://Icon.png")
+	test()
 
 func _on_Pay_Button_pressed():
 	get_tree().change_scene_to_file("res://Payment/select_coin.tscn")
