@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://sh1fm2drg2yk"]
 
-[ext_resource type="Texture2D" uid="uid://byvdsq103s4g8" path="res://Payment/Photos/back.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b5ofw72nuue0t" path="res://Payment/Photos/back.png" id="2"]
 [ext_resource type="Script" path="res://Payment/Payment.gd" id="3"]
-[ext_resource type="Texture2D" uid="uid://bevb8w45i6lfm" path="res://Payment/Photos/dash (dash).png" id="4_1rhde"]
+[ext_resource type="Texture2D" uid="uid://ctawxmnrybr7j" path="res://Payment/Photos/dash (dash).png" id="4_1rhde"]
 [ext_resource type="FontFile" uid="uid://ct2apt5gkmron" path="res://Payment/UI/TheanoDidot-Regular.ttf" id="5_f0b31"]
-[ext_resource type="Texture2D" uid="uid://wpy0qu662uh0" path="res://Payment/Photos/copy.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://cpi0ihe814p5l" path="res://Payment/Photos/paste.png" id="9"]
-[ext_resource type="Texture2D" uid="uid://cgqs8yydn477" path="res://Payment/Photos/help.png" id="10"]
-[ext_resource type="Texture2D" uid="uid://d1rqva2wxhmto" path="res://Payment/Photos/buy.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bmqtcc0q2duo6" path="res://Payment/Photos/copy.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dpc0xlxe84c54" path="res://Payment/Photos/paste.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c8g13fjgx080w" path="res://Payment/Photos/help.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bue8nb7b80hcw" path="res://Payment/Photos/buy.png" id="11"]
 [ext_resource type="Theme" uid="uid://dh006a4e4gjqk" path="res://Payment/UI/theme.tres" id="12"]
 
 [sub_resource type="Theme" id="Theme_tfgma"]
@@ -171,8 +171,8 @@ offset_top = 448.0
 offset_right = 1240.0
 offset_bottom = 560.0
 tooltip_text = "Transaction Hash ID (TXID)"
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 100, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_f0b31")
 theme_override_font_sizes/font_size = 40
