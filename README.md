@@ -38,13 +38,12 @@ In fact, with this method, the need for banks and app stores is eliminated, and 
 
 How the program works: The programmer puts the price of the program based on dollars in his program, and then the program shows the user the price of the program according to the price of the selected digital currency every time it is executed.
 
-It is possible to determine the price by using one of the cryptocurrency price announcement sites by raw source code. Then, the user must deposit the desired price in that cryptocurrency to the specified account address within the time limit. Each money deposit through cryptocurrencies has a payment ID(Transaction Hash ID); The user must provide that payment ID to the app to validate it, and if it is validated, the purchase will be accepted.
+It is possible to determine the price by using one of the cryptocurrency price announcement sites by raw source code. Then, the user must deposit the desired price in that cryptocurrency to the specified account address within the time limit. Each money deposit through cryptocurrencies has a payment ID(Transaction Hash ID); The user must provide that payment ID to the app to validate it; if it is validated, the purchase will be accepted.
 
 Various cryptocurrency transaction tracking sites can be used to confirm the payment.
 
-Cryptocurrencies are free for everyone to use them. Websites for announcing the price of cryptocurrencies are also free to access for everyone. Websites tracking transactions are also accessible freely. As a result, programmers don't need middlemen paying them for these financial affairs and selling their products. There is no law or sanction against this method of earning money, and only accessing the Internet is enough.
+Cryptocurrencies are free for everyone to use them. Websites announcing the price of cryptocurrencies are also free for everyone to access. Websites tracking transactions are also accessible freely. As a result, programmers don't need middlemen paying them for these financial affairs and selling their products. There is no law or sanction against this method of earning money; only accessing the Internet is enough.
 
-For those cases where the price announcement site is down, a default price list has been placed on this GitHub site to be used.
-These default prices are in their folder (default prices) on this site.
+For those cases where the price announcement site is down, a default price list has been placed on this GitHub site to be used. These default prices are in their folder (default prices) on this site.
 
 Key information is updated through a special file (key_data.txt) on this GitHub site so that possible problems can be solved quickly in the future and there is no need to produce a new program and download it by the customer.
