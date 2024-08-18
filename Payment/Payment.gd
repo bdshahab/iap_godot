@@ -114,7 +114,7 @@ func http_key_data_function(result, response_code, _headers, body):
 		for line in text.split("\n"):
 			if num == 1:
 				if line != IAP_VERSION:
-					$payment_version_Dialog.show()
+					show_dialogue("back", "back", MESSAGE_PAYMENT_VERSION)
 					break
 			elif num == 2:
 				DATE_TIME_SITE = line
@@ -286,6 +286,19 @@ func paste_operation():
 func get_price_from_web(text):
 	return format_by_regex(text, PRICE_SITE_REGEX)
 
+func sub_http_price(number):
+	number = APP_PRICE / number
+	# Converting a number to text format helps to show it in normal mode not in scientific notation.
+	# For example, instead of (1.5e-07), we want (0.00000015)
+	var number_in_text = convert_exponential_to_normal(number)
+	number = float(number_in_text)
+	if number < MINIMUM_LIMIT_PRICE:
+		show_dialogue("back", "methods", MESSAGE_ANOTHER_CURRENCY)
+	else:
+		$text_price.text = number_in_text
+		counting_timer()
+		get_date_time()
+
 func http_price_function(result, response_code, _headers, body):
 	connection_status(response_code)
 	PRICE_TEST_IS_OK = false
@@ -295,18 +308,7 @@ func http_price_function(result, response_code, _headers, body):
 		var number = get_just_number(get_price_from_web(text))
 		if number != null:
 			PRICE_TEST_IS_OK = true
-			number = APP_PRICE / number
-			# Converting a number to text format helps to show it in normal mode not in scientific notation.
-			# For example, instead of (1.5e-07), we want (0.00000015)
-			var number_in_text = convert_exponential_to_normal(number)
-			number = float(number_in_text)
-			if number < MINIMUM_LIMIT_PRICE:
-				$priceDialog.show()
-			else:
-				$text_price.text = number_in_text
-				timer_active = true
-				counting_timer()
-				get_date_time()
+			sub_http_price(number)
 		else:
 			var coin_str = Global.selected_payment.replace(" ", "%20")
 			get_web_content_from(GITHUB, "default%20prices/", coin_str,".txt", http_default_price_function)
@@ -319,17 +321,7 @@ func http_default_price_function(result, code, _response_headers, body):
 		var number = body.get_string_from_utf8()
 		number = get_just_number(number)
 		if number != null:
-			number = APP_PRICE / number
-			# Converting a number to text format helps to show it in normal mode not in scientific notation.
-			# For example, instead of (1.5e-07), we want (0.00000015)
-			var number_in_text = "%0.8f" % number
-			number = float(number_in_text)
-			if number < MINIMUM_LIMIT_PRICE:
-				show_dialogue("back", "methods", MESSAGE_ANOTHER_CURRENCY)
-			else:
-				$text_price.text = number_in_text
-				timer_active = true
-				get_date_time()
+			sub_http_price(number)
 		else:
 			show_dialogue("back", "internet_lost", MESSAGE_LOST_CONNECTION)
 
