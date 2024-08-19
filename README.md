@@ -30,7 +30,7 @@ The user picks the method of payment, and then the app shows the price in that c
 
 In-app payment using cryptocurrencies
 
-Due to various restrictive laws or sanctions, financial exchanges are not available in a free and equal way for everyone in the world; But cryptocurrencies do not have any geographical limitations, and they are not limited to anyone. App stores usually follow those rules and sanctions, and for that reason, some developers cannot sell their products.
+Due to various restrictive laws or sanctions, financial exchanges are not available in a free and equal way for everyone in the world. Still, cryptocurrencies do not have any geographical limitations, and they are not limited to anyone. App stores usually follow those rules and sanctions, and for that reason, some developers cannot sell their products.
 
 However, those app stores also deduct a significant percentage of the sales as commissions and taxes from the income of developers! However, making in-app purchases using cryptocurrencies is possible to prevent that.
 
