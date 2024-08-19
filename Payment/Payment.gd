@@ -358,7 +358,11 @@ func get_web_content_from(main_site, site_prefix, site_middle, site_suffix, http
 	# Make the HTTP request
 	var error = http_request.request(main_site + site_prefix + site_middle + site_suffix)
 	if error != OK:
-		show_dialogue("", "internet_lost", MESSAGE_LOST_CONNECTION)
+		if (main_site + site_prefix + site_middle + site_suffix).begins_with(PRICE_SITE):
+			var coin_str = Global.selected_payment.replace(" ", "%20")
+			get_web_content_from(GITHUB, "default%20prices/", coin_str,".txt", http_default_price_function)
+		else:
+			show_dialogue("", "internet_lost", MESSAGE_LOST_CONNECTION)
 
 func get_display_time(number_seconds:int):
 	var sec = number_seconds % 60
