@@ -624,10 +624,14 @@ func _on_buy_mouse_exited():
 		$HBoxContainer/buy.self_modulate = "c40bff"
 
 func _on_ok_dialogue_pressed():
-	hide_dialogue()
+	if $HBoxContainer/buy.modulate != Color(1, 0, 1, 1):
+		go_back()
+	else:
+		hide_dialogue()
 
 func _on_buy_pressed():
-	go_next()
+	if $HBoxContainer/buy.modulate == Color(1, 0, 1, 1) and $dialogue.modulate.a != 1.0:
+		go_next()
 
 func _on_timer_timeout():
 	timer()
