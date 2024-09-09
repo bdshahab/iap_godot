@@ -354,7 +354,6 @@ func get_web_content_from(main_site, site_prefix, site_middle, site_suffix, http
 	add_child(http_request)
 	# Connect the request_completed signal
 	http_request.request_completed.connect(http_call_function)
-	#http_request.request_completed.connect(result, response_code, headers, body)
 	# Make the HTTP request
 	var error = http_request.request(main_site + site_prefix + site_middle + site_suffix)
 	if error != OK:
