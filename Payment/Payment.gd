@@ -8,7 +8,7 @@ Set its parameter to "true" to test.
 Also, the payment type must be Litecoin.
 https://litecoinblockexplorer.net/tx/61a7667851da2d1395c26f4eaba7a14a3c1355ba80e1b35678327619a115d21e
 '''
-var TESTING = not false
+var TESTING = false
 var PRICE_TEST_IS_OK = false
 var DATE_TEST_IS_OK = false
 var TIME_TEST_IS_OK = false
@@ -623,10 +623,10 @@ func _on_buy_mouse_exited():
 		$HBoxContainer/buy.self_modulate = "c40bff"
 
 func _on_ok_dialogue_pressed():
-	if dialogue_action != "":
-		go_back()
-	else:
+	if dialogue_action == "":
 		hide_dialogue()
+	else:
+		go_back()
 
 func _on_buy_pressed():
 	if $HBoxContainer/buy.modulate == Color(1, 0, 1, 1) and $dialogue.modulate.a != 1.0:
