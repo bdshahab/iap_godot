@@ -12,7 +12,7 @@ A simple way to enable in-app purchases using cryptocurrencies.
 
 A video clip about this method (A little different in appearance but the same in function):
 
-https://youtu.be/QOaZi6Bp4og
+[https://youtu.be/QOaZi6Bp4og](https://www.youtube.com/watch?v=z6vrjm8vtMI)
 
 
 Using this program's method, you can make in-app purchases using cryptocurrencies.
