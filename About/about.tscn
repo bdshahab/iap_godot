@@ -1,43 +1,49 @@
-[gd_scene load_steps=39 format=3 uid="uid://bkopai4byspds"]
+[gd_scene load_steps=45 format=3 uid="uid://bkopai4byspds"]
 
-[ext_resource type="Texture2D" uid="uid://cofme5okhmunv" path="res://About/photos/license.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://cr1oksscoymkq" path="res://icon.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bkbv6ab2obyxg" path="res://About/photos/license.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://3d24hkcaoowk" path="res://icon.png" id="2"]
 [ext_resource type="Theme" uid="uid://ddf74icgvwijg" path="res://About/theme.tres" id="4"]
-[ext_resource type="Texture2D" uid="uid://dkwksda3xlq3p" path="res://About/photos/social media/chess_com.png" id="6_mxm2w"]
-[ext_resource type="Texture2D" uid="uid://c0nfw2suabhk6" path="res://About/photos/social media/matrix.png" id="7"]
-[ext_resource type="Texture2D" uid="uid://crwr50su7jcfp" path="res://About/photos/social media/clouthub.png" id="7_50uqu"]
-[ext_resource type="Texture2D" uid="uid://cx3ne8pxliibn" path="res://About/photos/social media/mewe.png" id="9"]
-[ext_resource type="Texture2D" uid="uid://dg86m73dy0wgn" path="res://About/photos/social media/discord.png" id="9_1cky6"]
-[ext_resource type="Texture2D" uid="uid://fqn2vap55nlv" path="res://About/photos/social media/gettr.png" id="10"]
-[ext_resource type="Texture2D" uid="uid://ylwaxqevycw3" path="res://About/photos/social media/tiktok.png" id="11"]
-[ext_resource type="Texture2D" uid="uid://x6kgncv8js6r" path="res://About/photos/social media/justpaste-it.png" id="12"]
-[ext_resource type="Texture2D" uid="uid://c8k2u1sti5ayg" path="res://About/photos/social media/flipboard.png" id="13"]
-[ext_resource type="Texture2D" uid="uid://brkrrute136s8" path="res://About/photos/social media/facebook.png" id="15"]
-[ext_resource type="Texture2D" uid="uid://dqdlo06jbdfom" path="res://About/photos/social media/blogger.png" id="16"]
-[ext_resource type="Texture2D" uid="uid://bqtmrj8u0kv31" path="res://About/photos/social media/itch.io.jpg" id="16_k3m2b"]
-[ext_resource type="Texture2D" uid="uid://dqdnkqn686wg3" path="res://About/photos/social media/diaspora.png" id="17"]
-[ext_resource type="Texture2D" uid="uid://bglojhuu3bcpj" path="res://About/photos/social media/Mastodon.png" id="18"]
-[ext_resource type="Texture2D" uid="uid://cealil1543wl6" path="res://About/photos/social media/lichess.png" id="18_70qih"]
-[ext_resource type="Texture2D" uid="uid://mhk8pxaamdqn" path="res://About/photos/social media/telegram.png" id="19"]
-[ext_resource type="Texture2D" uid="uid://ba50eycm6gj41" path="res://About/photos/social media/linkedin.png" id="21"]
-[ext_resource type="Texture2D" uid="uid://dgfh6t4t4uowc" path="res://About/photos/social media/livejournal.png" id="22"]
-[ext_resource type="Texture2D" uid="uid://b3uag2hgkf4e" path="res://About/photos/social media/odysee.png" id="23"]
-[ext_resource type="Texture2D" uid="uid://c247psjvxopmm" path="res://About/photos/social media/instagram.png" id="24"]
-[ext_resource type="Texture2D" uid="uid://ds27p4eej3h1v" path="res://About/photos/social media/steemit.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://cjgvpt6t4j0sw" path="res://About/photos/social media/chess_com.png" id="6_mxm2w"]
+[ext_resource type="Texture2D" uid="uid://csi5r8ultse0o" path="res://About/photos/social media/blue_sky.png" id="6_xq2s8"]
+[ext_resource type="Texture2D" uid="uid://6kxs88gkaar2" path="res://About/photos/social media/matrix.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://hyf2sqp5put0" path="res://About/photos/social media/clouthub.png" id="7_50uqu"]
+[ext_resource type="Texture2D" uid="uid://jhpiadpwrdg4" path="res://About/photos/social media/mewe.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dui38na66lmek" path="res://About/photos/social media/discord.png" id="9_1cky6"]
+[ext_resource type="Texture2D" uid="uid://cco53kh561r7v" path="res://About/photos/social media/diamondapp.png" id="9_psm6b"]
+[ext_resource type="Texture2D" uid="uid://d0b34kagvr4v5" path="res://About/photos/social media/gettr.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://c5yjyrjff42rb" path="res://About/photos/social media/tiktok.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://b3x2cw11jh6y8" path="res://About/photos/social media/justpaste-it.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://dddqw52ccr3vs" path="res://About/photos/social media/flipboard.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cpdbo0ixej1xp" path="res://About/photos/social media/facebook.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://cwtiur67jdbsv" path="res://About/photos/social media/blogger.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://bsf6ihxiqd86e" path="res://About/photos/social media/itch.io.jpg" id="16_k3m2b"]
+[ext_resource type="Texture2D" uid="uid://sa8d3ison471" path="res://About/photos/social media/diaspora.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://b023arcgqccjv" path="res://About/photos/social media/Mastodon.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://meonaetf4lcx" path="res://About/photos/social media/lichess.png" id="18_70qih"]
+[ext_resource type="Texture2D" uid="uid://bpycnukuxlqni" path="res://About/photos/social media/telegram.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://xvuk6q65ne3h" path="res://About/photos/social media/linkedin.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://mgpgpcxnlw1" path="res://About/photos/social media/livejournal.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://de2mqe271h7ox" path="res://About/photos/social media/odysee.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://b86hf7u06srh7" path="res://About/photos/social media/instagram.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://ds4kjf4la5w7t" path="res://About/photos/social media/steemit.png" id="26"]
 [ext_resource type="Script" path="res://About/about.gd" id="27"]
-[ext_resource type="Texture2D" uid="uid://bsl25sq4vofes" path="res://About/photos/social media/the-dots.png" id="27_khpq8"]
-[ext_resource type="Texture2D" uid="uid://hhfawowc44eh" path="res://About/photos/social media/reddit.png" id="28"]
-[ext_resource type="Texture2D" uid="uid://vgepkfdrewcv" path="res://About/photos/social media/medium.png" id="29"]
-[ext_resource type="Texture2D" uid="uid://ckrgccf4fghdx" path="res://About/photos/social media/pinterest.png" id="31"]
-[ext_resource type="Texture2D" uid="uid://cp8pbi8m1oo1q" path="res://About/photos/social media/vk.png" id="32"]
-[ext_resource type="Texture2D" uid="uid://yualuf7nbc12" path="res://About/photos/social media/gab.png" id="33"]
-[ext_resource type="Texture2D" uid="uid://byqmjodrasxol" path="res://About/photos/social media/flickr.png" id="34"]
-[ext_resource type="Texture2D" uid="uid://brr1lhjgmk113" path="res://About/photos/social media/xing.png" id="34_nv837"]
-[ext_resource type="Texture2D" uid="uid://b7hcqmmvp1evr" path="res://About/photos/social media/x.png" id="34_x82k7"]
-[ext_resource type="Texture2D" uid="uid://dhw55uovlxrnb" path="res://About/photos/social media/tumblr.png" id="35"]
-[ext_resource type="Texture2D" uid="uid://bxkgtb4wvwk70" path="res://About/photos/social media/wordpress.png" id="36"]
-[ext_resource type="Texture2D" uid="uid://cf1i7mvo2mhth" path="res://About/photos/social media/youtube.png" id="37"]
-[ext_resource type="Texture2D" uid="uid://c400n3qbj6wcu" path="res://About/photos/social media/minds.png" id="58"]
+[ext_resource type="Texture2D" uid="uid://bjsq27u0hkl5p" path="res://About/photos/social media/the-dots.png" id="27_khpq8"]
+[ext_resource type="Texture2D" uid="uid://cv2a0xacrspg6" path="res://About/photos/social media/reddit.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://lhi6kbg0gxli" path="res://About/photos/social media/medium.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://bjca2dxqyeaxo" path="res://About/photos/social media/primal.png" id="30_ej7cf"]
+[ext_resource type="Texture2D" uid="uid://baipkctxljnw6" path="res://About/photos/social media/pinterest.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://vr0auvrargtj" path="res://About/photos/social media/vk.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://dqrgmcdj25h4d" path="res://About/photos/social media/rumble.png" id="32_rcuu1"]
+[ext_resource type="Texture2D" uid="uid://c2ks6mwdc12di" path="res://About/photos/social media/gab.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://dp12lih1lvw5q" path="res://About/photos/social media/spoutible.png" id="33_2etvy"]
+[ext_resource type="Texture2D" uid="uid://cnkhuho01gfk4" path="res://About/photos/social media/flickr.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://eruqtl8ou1l3" path="res://About/photos/social media/xing.png" id="34_nv837"]
+[ext_resource type="Texture2D" uid="uid://iyf0h4ceeka0" path="res://About/photos/social media/x.png" id="34_x82k7"]
+[ext_resource type="Texture2D" uid="uid://c4qxxtygsb0ub" path="res://About/photos/social media/tumblr.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://ghfhgy1qks1y" path="res://About/photos/social media/wordpress.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://dmuherh7vhdnr" path="res://About/photos/social media/youtube.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://bmoeci3pcgl6s" path="res://About/photos/social media/threads.png" id="37_8m121"]
+[ext_resource type="Texture2D" uid="uid://c7ge2w1by0cjv" path="res://About/photos/social media/minds.png" id="58"]
 
 [node name="about" type="Control"]
 layout_mode = 3
@@ -91,38 +97,6 @@ scale = Vector2(0.7, 0.78)
 tooltip_text = "https://duckduckgo.com/?q=bdshahab+IAP+by+Cryptocurrency"
 focus_mode = 0
 mouse_default_cursor_shape = 2
-
-[node name="lnk_bio" type="TextureButton" parent="."]
-custom_minimum_size = Vector2(255, 55)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -387.0
-offset_top = 126.0
-offset_right = 394.0
-offset_bottom = 270.0
-grow_horizontal = 2
-tooltip_text = "https://lnk.bio/bdshahab"
-focus_mode = 0
-mouse_default_cursor_shape = 2
-
-[node name="Title_bdshahab" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 81.0
-offset_bottom = 309.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.176471, 0.705882, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.427451, 0.427451, 0.427451, 1)
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 5
-theme_override_constants/shadow_outline_size = 5
-theme_override_font_sizes/font_size = 164
-text = "bdshahab"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="license" type="TextureButton" parent="."]
 layout_mode = 1
@@ -187,6 +161,17 @@ texture_normal = ExtResource("16")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="blue_sky" type="TextureButton" parent="social_media/hb0"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "https://bsky.app/profile/bdshahab.bsky.social"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_xq2s8")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="chess_com" type="TextureButton" parent="social_media/hb0"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
@@ -195,78 +180,6 @@ tooltip_text = "https://www.chess.com/member/bdshahab1982"
 focus_mode = 0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_mxm2w")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="empty1" type="TextureButton" parent="social_media/hb0"]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-size_flags_horizontal = 3
-tooltip_text = "https://lnk.bio/bdshahab"
-focus_mode = 0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("7_50uqu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="empty2" type="TextureButton" parent="social_media/hb0"]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-size_flags_horizontal = 3
-tooltip_text = "https://lnk.bio/bdshahab"
-focus_mode = 0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("7_50uqu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="empty3" type="TextureButton" parent="social_media/hb0"]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-size_flags_horizontal = 3
-tooltip_text = "https://lnk.bio/bdshahab"
-focus_mode = 0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("7_50uqu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="empty4" type="TextureButton" parent="social_media/hb0"]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-size_flags_horizontal = 3
-tooltip_text = "https://lnk.bio/bdshahab"
-focus_mode = 0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("7_50uqu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="empty5" type="TextureButton" parent="social_media/hb0"]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-size_flags_horizontal = 3
-tooltip_text = "https://lnk.bio/bdshahab"
-focus_mode = 0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("7_50uqu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="empty6" type="TextureButton" parent="social_media/hb0"]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-size_flags_horizontal = 3
-tooltip_text = "https://lnk.bio/bdshahab"
-focus_mode = 0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("7_50uqu")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -281,6 +194,17 @@ texture_normal = ExtResource("7_50uqu")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="diamond" type="TextureButton" parent="social_media/hb0"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "https://diamondapp.com/u/bdshahab"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_psm6b")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="diaspora" type="TextureButton" parent="social_media/hb0"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
@@ -292,14 +216,7 @@ texture_normal = ExtResource("17")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="hb1" type="HBoxContainer" parent="social_media"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 8
-alignment = 1
-
-[node name="discord" type="TextureButton" parent="social_media/hb1"]
+[node name="discord" type="TextureButton" parent="social_media/hb0"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -310,7 +227,7 @@ texture_normal = ExtResource("9_1cky6")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="facebook" type="TextureButton" parent="social_media/hb1"]
+[node name="facebook" type="TextureButton" parent="social_media/hb0"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -321,7 +238,7 @@ texture_normal = ExtResource("15")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="flickr" type="TextureButton" parent="social_media/hb1"]
+[node name="flickr" type="TextureButton" parent="social_media/hb0"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -332,7 +249,7 @@ texture_normal = ExtResource("34")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="flipboard" type="TextureButton" parent="social_media/hb1"]
+[node name="flipboard" type="TextureButton" parent="social_media/hb0"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -342,6 +259,13 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("13")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="hb1" type="HBoxContainer" parent="social_media"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
 
 [node name="gab" type="TextureButton" parent="social_media/hb1"]
 custom_minimum_size = Vector2(90, 90)
@@ -409,15 +333,7 @@ texture_normal = ExtResource("18_70qih")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="hb2" type="HBoxContainer" parent="social_media"]
-custom_minimum_size = Vector2(555, 55)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 8
-alignment = 1
-
-[node name="linkedin" type="TextureButton" parent="social_media/hb2"]
+[node name="linkedin" type="TextureButton" parent="social_media/hb1"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -428,7 +344,7 @@ texture_normal = ExtResource("21")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="livejournal" type="TextureButton" parent="social_media/hb2"]
+[node name="livejournal" type="TextureButton" parent="social_media/hb1"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -439,7 +355,7 @@ texture_normal = ExtResource("22")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="mastodon" type="TextureButton" parent="social_media/hb2"]
+[node name="mastodon" type="TextureButton" parent="social_media/hb1"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -450,7 +366,7 @@ texture_normal = ExtResource("18")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="matrix" type="TextureButton" parent="social_media/hb2"]
+[node name="matrix" type="TextureButton" parent="social_media/hb1"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -460,6 +376,14 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="hb2" type="HBoxContainer" parent="social_media"]
+custom_minimum_size = Vector2(555, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
 
 [node name="medium" type="TextureButton" parent="social_media/hb2"]
 custom_minimum_size = Vector2(90, 90)
@@ -516,6 +440,17 @@ texture_normal = ExtResource("31")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="primal" type="TextureButton" parent="social_media/hb2"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "https://primal.net/p/npub1lu5m9cjqnyaqay0uc77t526qjtkx5qu8qxe8l2kqrflmagac3c8q7g8nu5"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("30_ej7cf")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="reddit" type="TextureButton" parent="social_media/hb2"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
@@ -527,15 +462,29 @@ texture_normal = ExtResource("28")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="hb3" type="HBoxContainer" parent="social_media"]
-custom_minimum_size = Vector2(555, 55)
+[node name="rumble" type="TextureButton" parent="social_media/hb2"]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 8
-alignment = 1
+tooltip_text = "https://rumble.com/c/c-1832445/videos"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("32_rcuu1")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="steemit" type="TextureButton" parent="social_media/hb3"]
+[node name="spoutible" type="TextureButton" parent="social_media/hb2"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "https://spoutible.com/bdshahab"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("33_2etvy")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="steemit" type="TextureButton" parent="social_media/hb2"]
 custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -545,6 +494,14 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource("26")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="hb3" type="HBoxContainer" parent="social_media"]
+custom_minimum_size = Vector2(555, 55)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
 
 [node name="telegram" type="TextureButton" parent="social_media/hb3"]
 custom_minimum_size = Vector2(90, 90)
@@ -565,6 +522,17 @@ tooltip_text = "https://the-dots.com/users/shahab-baradaran-dilmaghani-1291359"
 focus_mode = 0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("27_khpq8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="threads" type="TextureButton" parent="social_media/hb3"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "https://www.threads.net/@bdshahab1982"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("37_8m121")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -646,42 +614,41 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [connection signal="pressed" from="game" to="." method="_on_game_pressed"]
-[connection signal="pressed" from="lnk_bio" to="." method="_on_lnk_bio_pressed"]
 [connection signal="pressed" from="license" to="." method="_on_license_pressed"]
 [connection signal="pressed" from="OK" to="." method="_on_OK_pressed"]
 [connection signal="pressed" from="social_media/hb0/blogger" to="." method="_on_blogger_pressed"]
+[connection signal="pressed" from="social_media/hb0/blue_sky" to="." method="_on_blue_sky_pressed"]
 [connection signal="pressed" from="social_media/hb0/chess_com" to="." method="_on_chess_com_pressed"]
-[connection signal="pressed" from="social_media/hb0/empty1" to="." method="_on_lnk_bio_pressed"]
-[connection signal="pressed" from="social_media/hb0/empty2" to="." method="_on_lnk_bio_pressed"]
-[connection signal="pressed" from="social_media/hb0/empty3" to="." method="_on_lnk_bio_pressed"]
-[connection signal="pressed" from="social_media/hb0/empty4" to="." method="_on_lnk_bio_pressed"]
-[connection signal="pressed" from="social_media/hb0/empty5" to="." method="_on_lnk_bio_pressed"]
-[connection signal="pressed" from="social_media/hb0/empty6" to="." method="_on_lnk_bio_pressed"]
 [connection signal="pressed" from="social_media/hb0/clouthub" to="." method="_on_clouthub_pressed"]
+[connection signal="pressed" from="social_media/hb0/diamond" to="." method="_on_diamond_pressed"]
 [connection signal="pressed" from="social_media/hb0/diaspora" to="." method="_on_diaspora_pressed"]
-[connection signal="pressed" from="social_media/hb1/discord" to="." method="_on_discord_pressed"]
-[connection signal="pressed" from="social_media/hb1/facebook" to="." method="_on_facebook_pressed"]
-[connection signal="pressed" from="social_media/hb1/flickr" to="." method="_on_flickr_pressed"]
-[connection signal="pressed" from="social_media/hb1/flipboard" to="." method="_on_flipboard_pressed"]
+[connection signal="pressed" from="social_media/hb0/discord" to="." method="_on_discord_pressed"]
+[connection signal="pressed" from="social_media/hb0/facebook" to="." method="_on_facebook_pressed"]
+[connection signal="pressed" from="social_media/hb0/flickr" to="." method="_on_flickr_pressed"]
+[connection signal="pressed" from="social_media/hb0/flipboard" to="." method="_on_flipboard_pressed"]
 [connection signal="pressed" from="social_media/hb1/gab" to="." method="_on_gab_pressed"]
 [connection signal="pressed" from="social_media/hb1/gettr" to="." method="_on_gettr_pressed"]
 [connection signal="pressed" from="social_media/hb1/instagram" to="." method="_on_instagram_pressed"]
 [connection signal="pressed" from="social_media/hb1/itch_io" to="." method="_on_itch_io_pressed"]
 [connection signal="pressed" from="social_media/hb1/justpaste_it" to="." method="_on_justpaste_it_pressed"]
 [connection signal="pressed" from="social_media/hb1/lichess" to="." method="_on_lichess_pressed"]
-[connection signal="pressed" from="social_media/hb2/linkedin" to="." method="_on_linkedin_pressed"]
-[connection signal="pressed" from="social_media/hb2/livejournal" to="." method="_on_livejournal_pressed"]
-[connection signal="pressed" from="social_media/hb2/mastodon" to="." method="_on_mastodon_pressed"]
-[connection signal="pressed" from="social_media/hb2/matrix" to="." method="_on_matrix_pressed"]
+[connection signal="pressed" from="social_media/hb1/linkedin" to="." method="_on_linkedin_pressed"]
+[connection signal="pressed" from="social_media/hb1/livejournal" to="." method="_on_livejournal_pressed"]
+[connection signal="pressed" from="social_media/hb1/mastodon" to="." method="_on_mastodon_pressed"]
+[connection signal="pressed" from="social_media/hb1/matrix" to="." method="_on_matrix_pressed"]
 [connection signal="pressed" from="social_media/hb2/medium" to="." method="_on_medium_pressed"]
 [connection signal="pressed" from="social_media/hb2/mewe" to="." method="_on_mewe_pressed"]
 [connection signal="pressed" from="social_media/hb2/minds" to="." method="_on_minds_pressed"]
 [connection signal="pressed" from="social_media/hb2/odysee" to="." method="_on_odysee_pressed"]
 [connection signal="pressed" from="social_media/hb2/pinterest" to="." method="_on_pinterest_pressed"]
+[connection signal="pressed" from="social_media/hb2/primal" to="." method="_on_primal_pressed"]
 [connection signal="pressed" from="social_media/hb2/reddit" to="." method="_on_reddit_pressed"]
-[connection signal="pressed" from="social_media/hb3/steemit" to="." method="_on_steemit_pressed"]
+[connection signal="pressed" from="social_media/hb2/rumble" to="." method="_on_rumble_pressed"]
+[connection signal="pressed" from="social_media/hb2/spoutible" to="." method="_on_spoutible_pressed"]
+[connection signal="pressed" from="social_media/hb2/steemit" to="." method="_on_steemit_pressed"]
 [connection signal="pressed" from="social_media/hb3/telegram" to="." method="_on_telegram_pressed"]
 [connection signal="pressed" from="social_media/hb3/the_dots" to="." method="_on_the_dots_pressed"]
+[connection signal="pressed" from="social_media/hb3/threads" to="." method="_on_threads_pressed"]
 [connection signal="pressed" from="social_media/hb3/tiktok" to="." method="_on_tiktok_pressed"]
 [connection signal="pressed" from="social_media/hb3/tumblr" to="." method="_on_tumblr_pressed"]
 [connection signal="pressed" from="social_media/hb3/vk" to="." method="_on_vk_pressed"]
