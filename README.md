@@ -22,7 +22,7 @@ This program is written in Godot game engine and GDscript programming language:
 
 [https://godotengine.org](https://godotengine.org)
 
-Users only had limited time to finish payment.
+[Users only had limited time to finish payment.
 
 The user picks the method of payment, and then the app shows the price in that currency. Users have to send that amount of money to the address. Users have to paste [TXID] of payment in the program. The app will verify the payment with the registered price at that time.
 
@@ -47,3 +47,4 @@ Cryptocurrencies are free for everyone to use them. Websites announcing the pric
 For those cases where the price announcement site is down, a default price list has been placed on this GitHub site to be used. These default prices are in their folder (default prices) on this site.
 
 Key information is updated through a special file (key_data.txt) on this GitHub site so that possible problems can be solved quickly in the future and there is no need to produce a new program and download it by the customer.
+](https://github.com/bdshahab/iap_tkinter/edit/main/README.md)
