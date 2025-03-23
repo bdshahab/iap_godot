@@ -30,7 +30,7 @@ The user picks the payment method, and then the app shows the price in that curr
 
 In-app payment using cryptocurrencies
 
-Due to various restrictive laws or sanctions, financial exchanges are not available in a free and equal way for everyone in the world. Still, cryptocurrencies do not have any geographical limitations, and they are not limited to anyone. App stores usually follow those rules and sanctions, so some developers cannot sell their products.
+Due to various restrictive laws or sanctions, financial exchanges are not available freely and equally for everyone in the world. Still, cryptocurrencies do not have any geographical limitations, and they are not limited to anyone. App stores usually follow those rules and sanctions, so some developers cannot sell their products.
 
 However, those app stores also deduct a significant percentage of the sales as commissions and taxes from the income of developers! However, making in-app purchases using cryptocurrencies is possible to prevent that.
 
@@ -46,4 +46,4 @@ Cryptocurrencies are free for everyone to use. Websites announcing the price of 
 
 For those cases where the price announcement site is down, a default price list has been placed on this GitHub site to be used. These default prices are in their folder (default prices) on this site.
 
-Key information is updated through a special file (key_data.txt) on this GitHub site so that possible problems can be solved quickly in the future, and there is no need to produce a new program and download it by the customer.
+Key information is updated through a special file (key_data.txt) on this GitHub site so that possible problems can be solved quickly in the future, and there is no need to produce a new program and download it to the customer.
