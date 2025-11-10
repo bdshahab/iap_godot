@@ -1,6 +1,12 @@
 # In-app purchasing by cryptocurrency
 
 (It's not a plugin!)
+The game engine model is no longer being updated! For updates, please refer to the Python model!
+Python (PySide6): https://github.com/bdshahab/iap_qt
+
+Python (tkinter): https://github.com/bdshahab/iap_tkinter
+
+
 
 <img width="859" alt="1" src="https://github.com/bdshahab/in-app-purchasing-by-crypto/assets/17976016/e7ee57fe-dc7a-401c-8395-848e584e5ec8">
 
